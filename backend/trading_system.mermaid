@@ -1,0 +1,45 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	initialize(initialize)
+	classifier(classifier)
+	other_handler(other_handler)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> initialize;
+	classifier -.-> other_handler;
+	classifier -.-> trade_exit_agent___start__;
+	classifier -.-> trade_invest_agent___start__;
+	initialize --> classifier;
+	trade_invest_agent_synthesis -. ;FINISH; .-> __end__;
+	trade_invest_agent_synthesis -.-> trade_exit_agent___start__;
+	other_handler --> __end__;
+	trade_exit_agent_synthesis --> __end__;
+	subgraph trade_invest_agent
+	trade_invest_agent___start__(<p>__start__</p>)
+	trade_invest_agent_analysis(analysis)
+	trade_invest_agent_tools(tools)
+	trade_invest_agent_synthesis(synthesis)
+	trade_invest_agent___start__ --> trade_invest_agent_analysis;
+	trade_invest_agent_analysis -.-> trade_invest_agent_synthesis;
+	trade_invest_agent_analysis -.-> trade_invest_agent_tools;
+	trade_invest_agent_tools -.-> trade_invest_agent_analysis;
+	trade_invest_agent_tools -.-> trade_invest_agent_synthesis;
+	end
+	subgraph trade_exit_agent
+	trade_exit_agent___start__(<p>__start__</p>)
+	trade_exit_agent_analysis(analysis)
+	trade_exit_agent_tools(tools)
+	trade_exit_agent_synthesis(synthesis)
+	trade_exit_agent___start__ --> trade_exit_agent_analysis;
+	trade_exit_agent_analysis -.-> trade_exit_agent_synthesis;
+	trade_exit_agent_analysis -.-> trade_exit_agent_tools;
+	trade_exit_agent_tools -.-> trade_exit_agent_analysis;
+	trade_exit_agent_tools -.-> trade_exit_agent_synthesis;
+	end
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

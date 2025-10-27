@@ -1,0 +1,130 @@
+{
+    "entryPoints": [
+        {
+            "filePath": "trading_system",
+            "uniqueId": "9b663894-87d6-4340-b0cf-67376f46af71",
+            "type": "agent",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "title": "Query",
+                        "type": "string"
+                    },
+                    "date_of_trade": {
+                        "type": "string"
+                    },
+                    "trade_capital": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "query"
+                ]
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "messages": {
+                        "default": null,
+                        "items": {
+                            "additionalProperties": true,
+                            "description": "Base abstract message class.\n\nMessages are the inputs and outputs of ChatModels.",
+                            "properties": {
+                                "content": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "items": {
+                                                "anyOf": [
+                                                    {
+                                                        "type": "string"
+                                                    },
+                                                    {
+                                                        "additionalProperties": true,
+                                                        "type": "object"
+                                                    }
+                                                ]
+                                            },
+                                            "type": "array"
+                                        }
+                                    ],
+                                    "title": "Content"
+                                },
+                                "additional_kwargs": {
+                                    "additionalProperties": true,
+                                    "title": "Additional Kwargs",
+                                    "type": "object"
+                                },
+                                "response_metadata": {
+                                    "additionalProperties": true,
+                                    "title": "Response Metadata",
+                                    "type": "object"
+                                },
+                                "type": {
+                                    "title": "Type",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "content",
+                                "type"
+                            ],
+                            "title": "BaseMessage",
+                            "type": "object"
+                        },
+                        "title": "Messages",
+                        "type": "array"
+                    },
+                    "query": {
+                        "default": null,
+                        "title": "Query",
+                        "type": "string"
+                    },
+                    "query_type": {
+                        "default": null,
+                        "title": "Query Type",
+                        "type": "string"
+                    },
+                    "date_of_trade": {
+                        "type": "string"
+                    },
+                    "trade_capital": {
+                        "default": null,
+                        "title": "Trade Capital",
+                        "type": "number"
+                    },
+                    "ticker_symbol": {
+                        "type": "string"
+                    },
+                    "trade_recommendation": {
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "exit_analysis": {
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "next": {
+                        "default": null,
+                        "title": "Next",
+                        "type": "string"
+                    }
+                },
+                "required": []
+            }
+        }
+    ],
+    "bindings": {
+        "version": "2.0",
+        "resources": []
+    }
+}

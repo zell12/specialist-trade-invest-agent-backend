@@ -1,0 +1,11 @@
+{
+  "dockerfile_lines": [],
+  "graphs": {
+    "trading_system": "./agents/main_graph.py:trading_chain"
+  },
+  "python_version": "3.11",
+  "env": ".env",
+  "dependencies": [
+    "."
+  ]
+}
