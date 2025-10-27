@@ -1,6 +1,6 @@
 ## 🤖 STONKS: Specialist Trading/Investing Operations with Neural Knowledge Agentic System 🤖
 
-# UiPath SDK · LangChain · LangGraph · OpenAI · FastAPI · Python
+### UiPath SDK · LangChain · LangGraph · OpenAI · FastAPI · Python
 
 ## 🧾 Overview
 
