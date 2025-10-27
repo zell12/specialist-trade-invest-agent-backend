@@ -1,6 +1,6 @@
-# 🤖 STONKS: Specialist Trading/Investing Operations with Neural Knowledge Agentic System
+## 🤖 STONKS: Specialist Trading/Investing Operations with Neural Knowledge Agentic System 🤖
 
-· UiPath SDK · LangChain · LangGraph · OpenAI · FastAPI · Python
+# UiPath SDK · LangChain · LangGraph · OpenAI · FastAPI · Python
 
 ## 🧾 Overview
 
@@ -80,9 +80,7 @@ Before you begin, ensure you have the following:
 - ✅ NewsAPI Key
 
 **UiPath Setup:**
-- ✅ UiPath Orchestrator access
-- ✅ Storage Buckets configured
-- ✅ Agent deployment environment
+- ✅ UiPath Orchestrator org and tenant access
 
 ### 📦 Installation
 
