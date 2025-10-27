@@ -62,7 +62,7 @@ graph TD;
 | **Caching System** | ChromaDB + Custom Cache | Optimized data retrieval with intelligent caching |
 | **UiPath Integration** | UiPath SDK, Context Grounding, Maestro | Enterprise automation and workflow integration |
 | **REST API** | FastAPI | RESTful endpoints for easy integration |
-| **RAG Capabilities** | UiPath Context Grounding | ChromaDB + OpenAI | Document-based context and knowledge retrieval |
+| **RAG Capabilities** | UiPath Context Grounding, ChromaDB + OpenAI | Document-based context and knowledge retrieval |
 
 ## 🧩 Getting Started
 
